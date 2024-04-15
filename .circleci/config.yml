@@ -27,6 +27,6 @@ workflows:
   simple_workflow:
     jobs:
       - build
-      - test
+      - test:
           requires:
             - build
