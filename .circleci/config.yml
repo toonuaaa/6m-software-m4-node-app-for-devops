@@ -10,7 +10,7 @@ jobs:
       - checkout
       - node/install-packages:
           pkg-manager: npm
-      - run: 
+      - run: |
           echo "Installing dependencies..."
           npm install
   test:
@@ -20,7 +20,7 @@ jobs:
       - checkout
       - node/install-packages:
           pkg-manager: npm
-      - run: 
+      - run: |
           echo "Running tests..."
           npm run test
 workflows:
