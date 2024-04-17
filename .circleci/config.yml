@@ -31,8 +31,10 @@ jobs:
       - docker/check
       - docker/build:
           image: toonuaaa/education-space
+          tag: v1.0
       - docker/push:
           image: toonuaaa/education-space
+          tag: v1.0
 workflows:
   simple_workflow:
     jobs:
