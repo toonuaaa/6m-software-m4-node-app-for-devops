@@ -55,19 +55,25 @@ workflows:
       - build:
           filters:
             branches:
-              only: main
+              only:
+                - main
+                - release
       - test:
           requires:
             - build
           filters:
             branches:
-              only: main
+              only:
+                - main
+                - release
       - scan:
           requires:
             - build
           filters:
             branches:
-              only: main
+              only:
+                - main
+                - release
       - publish:
           requires:
             - test
